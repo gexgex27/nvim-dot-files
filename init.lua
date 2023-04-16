@@ -1,3 +1,7 @@
 require("config.core.options")
 require("config.plugins-setup")
 require("config.core.colorscheme")
+require("config.plugins.whichkey")
+require("config.plugins.mason")
+require("config.plugins.lspconfig")
+require("config.plugins.cmp")
