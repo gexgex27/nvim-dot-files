@@ -46,6 +46,8 @@ return packer.startup(function(use)
   use { "windwp/nvim-autopairs" }
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  -- Nvim-tree
+  use { "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" }
   -----------------------------------------------------------------
   -- Темы для Nvim
   -----------------------------------------------------------------
@@ -84,7 +86,7 @@ return packer.startup(function(use)
   -- Табы
   use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" }
   -- Строка состояния
-  use { "nvim-lualine/lualine.nvim" }
+  use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } }
   -----------------------------------------------------------------
   -- Мелочи
   -----------------------------------------------------------------
