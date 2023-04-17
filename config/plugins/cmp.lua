@@ -10,6 +10,12 @@ if not status_luasnip then
   return
 end
 
+local status_lspkind, lspkind = pcall(require, "lspkind")
+if not status_lspkind then
+  print("Lspkind не подключен!")
+  return
+end
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 cmp.setup({
@@ -32,5 +38,21 @@ cmp.setup({
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "treesitter" },
   }),
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = "symbol_text",
+      menu = ({
+        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
+        luasnip = "[LuaSnip]",
+        nvim_lua = "[Lua]",
+        latex_symbols = "[Latex]",
+        treesitter = "[Treesitter]"
+      }),
+      maxwidth = 30,
+      ellipsis_char = "...",
+    }),
+  },
 })

@@ -112,9 +112,8 @@ local melange = function(color)
   return "colorscheme melange"
 end
 
-local status, theme = pcall(vim.cmd, kanagawa("wave")) 
+local status, theme = pcall(vim.cmd, kanagawa("wave"))
 if not status then
   print("Тема не найдена!")
   return
 end
-

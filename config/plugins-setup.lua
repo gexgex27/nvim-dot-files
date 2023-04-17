@@ -42,6 +42,10 @@ return packer.startup(function(use)
   use { "nvim-lua/plenary.nvim" }
   -- Иконки для плагинов
   use { "nvim-tree/nvim-web-devicons" }
+  -- Парные скобки
+  use { "windwp/nvim-autopairs" }
+  -- Treesitter
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   -----------------------------------------------------------------
   -- Темы для Nvim
   -----------------------------------------------------------------
@@ -69,6 +73,7 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-nvim-lsp" }
   use { "hrsh7th/cmp-path" }
   use { "hrsh7th/cmp-buffer" }
+  use { "ray-x/cmp-treesitter" }
   -- Сниппеты
   use { "L3MON4D3/LuaSnip" }
   use { "saadparwaiz1/cmp_luasnip" }
@@ -87,8 +92,12 @@ return packer.startup(function(use)
   use { "christoomey/vim-tmux-navigator" }
   -- Комментарии по горячим клавишам
   use { "numToStr/Comment.nvim" }
-  -- Горячик клавиши
+  -- Горячиe клавиши
   use { "folke/which-key.nvim" }
+  -- Замена парных символов
+  use { "kylechui/nvim-surround" }
+  -- Иконки для автодополнения
+  use { "onsails/lspkind.nvim" }
   if packer_bootstrap then
     require('packer').sync()
   end
