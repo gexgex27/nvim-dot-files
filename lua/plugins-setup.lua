@@ -98,6 +98,11 @@ return packer.startup(function(use)
   use { "kylechui/nvim-surround" }
   -- Иконки для автодополнения
   use { "onsails/lspkind.nvim" }
+  -- Telescope
+  use { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
+  use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+  -- Code action меню
+  use { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" }
   if packer_bootstrap then
     require('packer').sync()
   end

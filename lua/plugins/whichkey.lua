@@ -81,45 +81,39 @@ local n_mapping = {
   ["<C-l>"]      = { ":TmuxNavigateRight <CR>", "Tmux Navigate Right" },
   ["<C-Bslash>"] = { ":TmuxNavigatePrevious <CR>", "Tmux Navigate Previous" },
   -- Telescope
-  ["<leader>"] = {
-    f = {
+  ["<leader>f"] = {
       name = "Telescope",
       f = { "<cmd>Telescope find_files<cr>", "Find File" },
       s = { "<cmd>Telescope live_grep<cr>", "Live Grep"},
       c = { "<cmd>Telescope grep_string<cr>", "Grep String"},
       b = { "<cmd>Telescope buffers<cr>", "Buffers"},
       h = { "<cmd>Telescope help_tags<cr>", "Find Help"},
-      b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+      g = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
       M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
       r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
       R = { "<cmd>Telescope registers<cr>", "Registers" },
       k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
       C = { "<cmd>Telescope commands<cr>", "Commands" },
-    },
   },
   -- NvimTree
   ["<leader>e"] = { ":NvimTreeToggle<CR>", "NvimTree Open/Close" },
   -- Packer
-  ["<leader>"] = {
-    p = {
+  ["<leader>p"] = {
       name = "Packer",
       c = { "<cmd>PackerCompile<cr>", "Compile" },
       i = { "<cmd>PackerInstall<cr>", "Install" },
       s = { "<cmd>PackerSync<cr>", "Sync" },
       S = { "<cmd>PackerStatus<cr>", "Status" },
       u = { "<cmd>PackerUpdate<cr>", "Update" },
-    },
   },
   -- LSP
-  ["<leader>"] = {
-    l = {
+  ["<leader>l"] = {
       name = "LSP",
-      a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+      a = { "<cmd>CodeActionMenu<cr>", "Code Action" }, 
       d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
       w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
       f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
       i = { "<cmd>LspInfo<cr>", "Info" },
-      I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
       j = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", "Next Diagnostic" },
       k = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
       l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
@@ -127,8 +121,7 @@ local n_mapping = {
       r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
       s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
       S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
-    },
-  }
+  },
 }
 
 local conf = {
