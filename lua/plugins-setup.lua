@@ -111,6 +111,8 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	-- Code action меню
 	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
+	-- Gitsigns
+	use({ "lewis6991/gitsigns.nvim" })
 	if packer_bootstrap then
 		require("packer").sync()
 	end
