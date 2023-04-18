@@ -113,6 +113,8 @@ return packer.startup(function(use)
 	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
 	-- Gitsigns
 	use({ "lewis6991/gitsigns.nvim" })
+	-- Индикатор отступов
+	use({ "lukas-reineke/indent-blankline.nvim" })
 	if packer_bootstrap then
 		require("packer").sync()
 	end
