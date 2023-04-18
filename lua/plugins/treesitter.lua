@@ -22,4 +22,7 @@ treesitter.setup({
     "php",
   },
   auto_install = true,
+  highlight = {
+    enable = true,
+  },
 })
