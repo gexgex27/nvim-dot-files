@@ -48,6 +48,8 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag" })
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	-- Разноцветные скобки
+	use({ "mrjones2014/nvim-ts-rainbow" })
 	-- Nvim-tree
 	use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
 	-----------------------------------------------------------------
