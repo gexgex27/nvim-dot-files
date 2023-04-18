@@ -113,6 +113,8 @@ return packer.startup(function(use)
 	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
 	-- Gitsigns
 	use({ "lewis6991/gitsigns.nvim" })
+	-- Терминал
+	use({ "akinsho/toggleterm.nvim" })
 	if packer_bootstrap then
 		require("packer").sync()
 	end
