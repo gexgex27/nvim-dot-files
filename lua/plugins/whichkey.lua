@@ -19,9 +19,8 @@ local x_opts = {
 }
 
 local x_mapping = {
-	-- Move Selected Line / Block Of Text In Visual Mode
-	["K"] = { "<CMD>move '<-2<CR>gv-gv", "Move Selected Up" },
-	["J"] = { "<CMD>move '>+1<CR>gv-gv", "Move Selected Down" },
+	["K"] = { "<cmd>m -2<cr>", "Move Selected Up" },
+	["J"] = { "<cmd>m +1<cr>", "Move Selected Down" },
 }
 
 local v_opts = {
