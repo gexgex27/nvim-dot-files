@@ -50,7 +50,7 @@ local rosepine = function(color)
     return "colorscheme rose-pine-dawn"
   else
     print("Неверные параметры темы")
-  return
+    return
   end
 end
 
@@ -110,6 +110,18 @@ local melange = function(color)
     return
   end
   return "colorscheme melange"
+end
+
+local everforest = function(color)
+  if color == "light" then
+    vim.o.background = "light"
+  elseif color == "dark" then
+    vim.o.background = "dark"
+  else
+    print("Неверные параметры темы")
+    return
+  end
+  return "colorscheme everforest"
 end
 
 local status, theme = pcall(vim.cmd, kanagawa("wave"))
